@@ -7,10 +7,11 @@ import ContactUs from "./pages/ContactUs";
 import Login from "./pages/Login";
 import Customers from "./pages/Customers";
 import NotFound from "./pages/NotFound";
+import Layout from "./components/Layout/Layout";
 
 const App = () => {
   return (
-    <>
+    <Layout>
         <Routes>
             <Route index element = {<Home/>}/>
             <Route path = "/products" element = {<Products/>}/>
@@ -21,7 +22,7 @@ const App = () => {
             <Route path = "/customers" element = {<Customers/>}/>
             <Route path = "*" element = {<NotFound/>}/>
         </Routes>
-    </>
+    </Layout>
   );
 };
 
