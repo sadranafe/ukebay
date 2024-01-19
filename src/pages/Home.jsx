@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import CardInfo from '../components/cardInfo';
 import TrendingProducts from '../components/TrendingProducts';
 import Feedback from '../components/Feedback';
+import Customers from '../components/Customers';
 
 const Home = () => {
     return (
@@ -28,6 +29,8 @@ const Home = () => {
             <TrendingProducts/>
 
             <Feedback/>
+
+            <Customers/>
         </>
     );
 };
