@@ -1,5 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import CardInfo from '../components/cardInfo';
 
 const Home = () => {
     return (
@@ -20,6 +20,8 @@ const Home = () => {
 
                 <img src = "./shoppingvector.png" alt = "mohammad sadra nafe" className = "w-1/2 h-80" />
             </div>
+                
+            <CardInfo/>
         </>
     );
 };
