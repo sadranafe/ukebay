@@ -1,6 +1,7 @@
 import { useState , useEffect } from "react";
 import axios from "axios";
 import Product from "../components/Product";
+import Loader from "../components/Layout/Loader";
 
 const Products = () => {
     const [DUMMYDATA, setDUMMYDATA] = useState([]);
@@ -23,7 +24,7 @@ const Products = () => {
                     {
                         DUMMYDATA.length === 0 
                         ?
-                        <p>loading...</p>
+                        <Loader/>
                         :
                         DUMMYDATA.map((item, index) =>
                             <Product key = {index} data = {item} trendingMode = {false} />
