@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Rating, Tooltip } from '@mui/material';
+import { shortenText } from '../helper/helper';
 
 const Product = ({ data , trendingMode }) => {
     const {image : img , title , id , price , rating} = data;
@@ -17,7 +18,7 @@ const Product = ({ data , trendingMode }) => {
 
                         <Link to = {`/products/${id}`} className = 'w-full'>
                             <div>
-                                <h3 className = 'text-sky-700 text-lg'>{title}</h3>
+                                <h3 className = 'text-sky-700 text-lg'>{shortenText(title)}</h3>
                             </div>
 
                             <div>
@@ -39,7 +40,7 @@ const Product = ({ data , trendingMode }) => {
 
                     <Link to = {`/products/${id}`} className = 'w-full'>
                         <div>
-                            <h3 className = 'text-sky-700 text-lg'>{ title }</h3>
+                            <h3 className = 'text-sky-700 text-lg'>{ shortenText(title) }</h3>
                         </div>
 
                         <div>
