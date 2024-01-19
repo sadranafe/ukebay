@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import CardInfo from '../components/cardInfo';
+import TrendingProducts from '../components/TrendingProducts';
 
 const Home = () => {
     return (
@@ -22,6 +23,8 @@ const Home = () => {
             </div>
                 
             <CardInfo/>
+
+            <TrendingProducts/>
         </>
     );
 };
