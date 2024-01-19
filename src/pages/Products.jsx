@@ -2,6 +2,7 @@ import { useState , useEffect } from "react";
 import axios from "axios";
 import Product from "../components/Product";
 import Loader from "../components/Layout/Loader";
+import Search from "../components/Search";
 
 const Products = () => {
     const [DUMMYDATA, setDUMMYDATA] = useState([]);
@@ -16,7 +17,7 @@ const Products = () => {
         <>
             <div className = "my-7 flex flex-wrap justify-center items-start">
                 <div className = "w-full flex flex-wrap justify-center items-center mb-3">
-                    search  & sort
+                    <Search />
                 </div>
 
 
