@@ -17,3 +17,10 @@ body{
     @apply bg-neutral-50;
 }
 
+div[role = 'tooltip'] > div{
+  @apply text-black border border-neutral-100 bg-white shadow-md shadow-gray-100;
+}
+
+div[role = 'tooltip'] span::before{
+  @apply bg-white border border-neutral-200;
+}
