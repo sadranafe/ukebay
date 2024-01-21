@@ -13,6 +13,11 @@ const createQuery = ( curQuery , newQuery ) => {
         return rest;
     }
 
+    if(newQuery.sort === 'delete'){
+        const {sort , ...rest} = curQuery;
+        return rest;
+    }
+
     // ...curQuery works when we have 2 keys Obj or more. Here we have 3 keys => ctageory & search & sort
     return {...curQuery , ...newQuery}
 }
@@ -41,4 +46,29 @@ const filterProducts = ( products , category ) => {
     return filteredProducts;
 }
 
-export { shortenText , createQuery , filterProducts , searchProducts }
+const sortProducts = ( products , sort ) => {
+    if(sort === undefined){
+        const sortById = products.sort( (a , b) => a.id - b.id )
+        return sortById;
+
+    }
+    
+    if(sort === 'ascending'){
+        const ascendingSort = products.sort((a , b) => b.rating.rate - a.rating.rate)
+        return ascendingSort;
+
+    } else if(sort === 'descending'){
+        const descendingSort = products.sort((a , b) => a.rating.rate - b.rating.rate)
+        return descendingSort;
+        
+    } else if(sort === 'highest price'){
+        const highestPrice = products.sort((a , b) => b.price - a.price)
+        return highestPrice;
+
+    } else if(sort === 'lowest price'){
+        const lowestPrice = products.sort((a , b) => a.price - b.price)
+        return lowestPrice;
+    }
+}
+
+export { shortenText , createQuery , filterProducts , searchProducts , sortProducts }
