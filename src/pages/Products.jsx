@@ -1,9 +1,10 @@
 import { useState , useEffect } from "react";
 import axios from "axios";
-import Product from "../components/Product";
 import Loader from "../components/Layout/Loader";
+import Product from "../components/Product";
 import Search from "../components/Search";
 import Sorts from "../components/Sorts";
+import Filters from "../components/Filters";
 
 const Products = () => {
     const [DUMMYDATA, setDUMMYDATA] = useState([]);
@@ -35,6 +36,8 @@ const Products = () => {
                         )
                     }
                 </div>
+
+                <Filters/>
             </div>
         </>
     );
