@@ -1,14 +1,8 @@
-import { useEffect, useState } from "react";
+import UseProducts from "../hooks/useProducts";
 import Product from "./Product";
-import axios from "axios";
 
 const TrendingProducts = () => {
-    const [DUMMYDATA , setDUMMYDATA] = useState([]);
-
-    useEffect(() => {
-        axios.get('/products')
-        .then(res => setDUMMYDATA(res))
-    },[])
+    const DUMMYDATA = UseProducts()
 
     const filteredTrendingProducts = DUMMYDATA.filter(item => {
         return (item.rating.rate > 4.5)
