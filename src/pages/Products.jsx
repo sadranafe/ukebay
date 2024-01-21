@@ -1,5 +1,8 @@
 import { useState , useEffect } from "react";
 import axios from "axios";
+import { useSearchParams } from "react-router-dom";
+import { filterProducts } from "../helper/helper";
+
 import Loader from "../components/Layout/Loader";
 import Product from "../components/Product";
 import Search from "../components/Search";
@@ -8,11 +11,26 @@ import Filters from "../components/Filters";
 
 const Products = () => {
     const [DUMMYDATA, setDUMMYDATA] = useState([]);
+    const [searchParams , setSearchParams] = useSearchParams()
+    const [filteredProducts , setFilteredProducts] = useState([]);
+    const [query , setQuery] = useState({});
 
     useEffect(() => {
         axios.get('/products')
             .then(res => setDUMMYDATA(res));
-    }, [])
+    },[])
+
+    useEffect(() => {
+
+        setFilteredProducts(DUMMYDATA)
+    },[DUMMYDATA])
+
+    useEffect(() => {
+        setSearchParams(query)
+
+        let finalProducts = filterProducts(DUMMYDATA , query.category)
+        setFilteredProducts(finalProducts);
+    },[query])
 
 
     return (
@@ -31,13 +49,13 @@ const Products = () => {
                         ?
                         <Loader/>
                         :
-                        DUMMYDATA.map((item, index) =>
+                        filteredProducts.map((item, index) =>
                             <Product key = {index} data = {item} trendingMode = {false} />
                         )
                     }
                 </div>
 
-                <Filters/>
+                <Filters query = {query} onQuery = {setQuery} />
             </div>
         </>
     );
