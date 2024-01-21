@@ -1,6 +1,7 @@
 import { useState , useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import axios from "axios";
+
+import UseProducts from "../hooks/useProducts";
 import { filterProducts, searchProducts, sortProducts } from "../helper/helper";
 
 import Loader from "../components/Layout/Loader";
@@ -10,15 +11,10 @@ import Sorts from "../components/Sorts";
 import Filters from "../components/Filters";
 
 const Products = () => {
-    const [DUMMYDATA, setDUMMYDATA] = useState([]);
+    const DUMMYDATA = UseProducts();
     const [searchParams , setSearchParams] = useSearchParams()
     const [filteredProducts , setFilteredProducts] = useState([]);
     const [query , setQuery] = useState({});
-
-    useEffect(() => {
-        axios.get('/products')
-            .then(res => setDUMMYDATA(res));
-    },[])
 
     useEffect(() => {
 

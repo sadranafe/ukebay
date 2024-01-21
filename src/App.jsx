@@ -8,10 +8,12 @@ import Login from "./pages/Login";
 import Customers from "./pages/Customers";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout/Layout";
+import ProductsContext from "./context/productsContext";
 
 const App = () => {
   return (
     <Layout>
+      <ProductsContext>
         <Routes>
             <Route index element = {<Home/>}/>
             <Route path = "/products" element = {<Products/>}/>
@@ -22,6 +24,7 @@ const App = () => {
             <Route path = "/customers" element = {<Customers/>}/>
             <Route path = "*" element = {<NotFound/>}/>
         </Routes>
+      </ProductsContext>
     </Layout>
   );
 };
