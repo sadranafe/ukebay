@@ -1,7 +1,7 @@
 import { useState , useEffect } from "react";
-import axios from "axios";
 import { useSearchParams } from "react-router-dom";
-import { filterProducts } from "../helper/helper";
+import axios from "axios";
+import { filterProducts, searchProducts } from "../helper/helper";
 
 import Loader from "../components/Layout/Loader";
 import Product from "../components/Product";
@@ -29,6 +29,8 @@ const Products = () => {
         setSearchParams(query)
 
         let finalProducts = filterProducts(DUMMYDATA , query.category)
+        finalProducts = searchProducts(finalProducts , query.search)
+
         setFilteredProducts(finalProducts);
     },[query])
 
@@ -37,7 +39,7 @@ const Products = () => {
         <>
             <div className = "my-7 flex flex-wrap justify-center items-start">
                 <div className = "w-full flex flex-wrap justify-center items-center mb-3">
-                    <Search />
+                    <Search query = {query} onQuery = {setQuery}/>
 
                     <Sorts/>
                 </div>
