@@ -14,13 +14,13 @@ const HighlightedProduct = ({ data }) => {
                     </Link>
                 </div>
 
-                <div className = 'w-4/12 p-2 flex flex-wrap justify-center items-center'>
-                    <div className = 'w-9/12'>
-                        <img src = {img} alt = {title} className = 'w-full h-80'/>
+                <div className = 'w-4/12 flex flex-wrap justify-center items-center'>
+                    <div className = 'w-10/12'>
+                        <img src = {img} alt = {title} className = 'w-full h-full aspect-square'/>
                     </div>
                 </div>
 
-                <div className = 'w-8/12 bg-r ed-200'>
+                <div className = 'w-8/12'>
                     <div>
                         <h1 className = 'text-2xl capitalize'>{title}</h1>
                     </div>
