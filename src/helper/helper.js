@@ -50,7 +50,6 @@ const sortProducts = ( products , sort ) => {
     if(sort === undefined){
         const sortById = products.sort( (a , b) => a.id - b.id )
         return sortById;
-
     }
     
     if(sort === 'ascending'){
@@ -71,4 +70,25 @@ const sortProducts = ( products , sort ) => {
     }
 }
 
-export { shortenText , createQuery , filterProducts , searchProducts , sortProducts }
+const getInitialQuery = searchParams => {
+    const query = {};
+    const category = searchParams.get('category');
+    const search = searchParams.get('search');
+    const sort = searchParams.get('sort')
+
+    if(category){
+        query.category = category
+    }
+    
+    if(search){
+        query.search = search
+    }
+
+    if(sort){
+        query.sort = sort
+    }
+
+    return query;
+}
+
+export { shortenText , createQuery , filterProducts , searchProducts , sortProducts , getInitialQuery }

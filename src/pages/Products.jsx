@@ -2,7 +2,7 @@ import { useState , useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import UseProducts from "../hooks/useProducts";
-import { filterProducts, searchProducts, sortProducts } from "../helper/helper";
+import { filterProducts, getInitialQuery, searchProducts, sortProducts } from "../helper/helper";
 
 import Loader from "../components/Layout/Loader";
 import Product from "../components/Product";
@@ -17,8 +17,9 @@ const Products = () => {
     const [query , setQuery] = useState({});
 
     useEffect(() => {
-
         setFilteredProducts(DUMMYDATA)
+        
+        setQuery(getInitialQuery(searchParams))
     },[DUMMYDATA])
 
     useEffect(() => {

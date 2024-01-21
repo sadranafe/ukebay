@@ -1,4 +1,7 @@
 import { Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
+
+import ProductsContext from "./context/productsContext";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import ProductsDetails from "./pages/ProductsDetails";
@@ -7,8 +10,6 @@ import ContactUs from "./pages/ContactUs";
 import Login from "./pages/Login";
 import Customers from "./pages/Customers";
 import NotFound from "./pages/NotFound";
-import Layout from "./components/Layout/Layout";
-import ProductsContext from "./context/productsContext";
 
 const App = () => {
   return (
