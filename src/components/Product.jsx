@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Rating, Tooltip } from '@mui/material';
+import UseCart from '../hooks/useCart';
 import { shortenText } from '../helper/helper';
 
 const Product = ({ data , trendingMode }) => {
+    const [state , dispatch] = UseCart()
     const {image : img , title , id , price , rating} = data;
         
     return (
@@ -49,7 +51,7 @@ const Product = ({ data , trendingMode }) => {
                     </Link>
 
                     <div>
-                        <button className = 'border border-blue-300 hover:bg-blue-300 transition-all rounded-xl capitalize p-2 px-10 '>add to cart</button>
+                        <button onClick = {() => dispatch({type : 'ADD_TO_CART' , payLoad : data})} className = 'border border-blue-300 hover:bg-blue-300 transition-all rounded-xl capitalize p-2 px-10 '>add to cart</button>
                     </div>
                 </div>
             }
