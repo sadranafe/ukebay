@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createQuery } from "../helper/helper";
 
 const Search = ({ query , onQuery }) => {
     const [search , setSearch] = useState('');
+
+    useEffect(() => {
+        // if query.search is empty, setSearch will be empty ('') but if it's not empty, the value of the query.search will be set to Search State.
+        setSearch(query.search || '')
+    },[query])
 
     const submitHandler = () => {
         onQuery(prevState => {
