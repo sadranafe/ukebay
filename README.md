@@ -18,6 +18,15 @@ Welcome to _UkeBay_, our fantastic Shopping Cart project! 🛒 This project is a
 
 - Boxicons: Bringing a delightful set of icons to our project for intuitive and visually appealing user interactions.
 
+## Features
+- Nice filtering , sorting and searching!
+- Responsive design for optimal viewing across devices
+- Seamless navigation with React Router Dom
+- Integration of Material UI components for enhanced user interface
+- Asynchronous data fetching using Axios
+- Interactive carousels and sliders powered by Swiper
+- Icon integration with Boxicons for improved visual appeal
+
 ## Getting Started :
 
 #### Prerequisites
@@ -42,15 +51,6 @@ Welcome to _UkeBay_, our fantastic Shopping Cart project! 🛒 This project is a
 
 ## Contributing
 We welcome contributions to make __UkeBay__ even more awesome! Whether it's bug fixes, feature additions, or improvements to the documentation, your help is highly appreciated.
-
-## Features
-- Nice filtering , sorting and searching!
-- Responsive design for optimal viewing across devices
-- Seamless navigation with React Router Dom
-- Integration of Material UI components for enhanced user interface
-- Asynchronous data fetching using Axios
-- Interactive carousels and sliders powered by Swiper
-- Icon integration with Boxicons for improved visual appeal
 
 ## Acknowledgements
 - Special thanks to the creators and contributors of the dependencies used in this project.
