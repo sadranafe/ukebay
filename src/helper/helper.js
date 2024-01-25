@@ -101,4 +101,10 @@ const quantityCalc = ( data , id ) => {
     }
 }
 
-export { shortenText , createQuery , filterProducts , searchProducts , sortProducts , getInitialQuery , quantityCalc }
+const sumHandler = products => {
+    const totalQuantity = products.reduce((acc , cur) => ( acc + cur.quantity ) , 0)
+    const totalPrice = products.reduce((acc , cur) => acc + cur.price * cur.quantity , 0)
+    return { totalQuantity , totalPrice };
+}
+
+export { shortenText , createQuery , filterProducts , searchProducts , sortProducts , getInitialQuery , quantityCalc , sumHandler }

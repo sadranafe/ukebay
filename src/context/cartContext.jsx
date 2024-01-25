@@ -1,4 +1,5 @@
 import { createContext, useReducer } from "react";
+import { sumHandler } from "../helper/helper";
 
 const cart_context = createContext();
 
@@ -20,6 +21,7 @@ const reducer = (state , action) => {
 
             return {
                 ...state,
+                ...sumHandler(state.DUMMYDATA_CART)
             }
         }
 
@@ -31,6 +33,7 @@ const reducer = (state , action) => {
             return {
                 ...state,
                 DUMMYDATA_CART: [...selectedItem],
+                ...sumHandler(state.DUMMYDATA_CART)
             }
         }
 
@@ -43,6 +46,7 @@ const reducer = (state , action) => {
 
             return {
                 ...state,
+                ...sumHandler(state.DUMMYDATA_CART)
             }
         }
 
@@ -57,6 +61,7 @@ const reducer = (state , action) => {
 
             return {
                 ...state,
+                ...sumHandler(state.DUMMYDATA_CART),
             }
         }
     }
