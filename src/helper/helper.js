@@ -91,4 +91,14 @@ const getInitialQuery = searchParams => {
     return query;
 }
 
-export { shortenText , createQuery , filterProducts , searchProducts , sortProducts , getInitialQuery }
+const quantityCalc = ( data , id ) => {
+    const selectedProduct = data.find(item => {
+        return item.id === id
+    })
+
+    if(selectedProduct !== undefined){
+        return selectedProduct.quantity
+    }
+}
+
+export { shortenText , createQuery , filterProducts , searchProducts , sortProducts , getInitialQuery , quantityCalc }
