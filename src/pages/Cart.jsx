@@ -3,7 +3,7 @@ import UseCart from "../hooks/useCart";
 import CartItem from "../components/cartItem";
 
 const Cart = () => {
-    const [{ DUMMYDATA_CART , totalPrice , totalQuantity }, dispatch] = UseCart();
+    const [{ DUMMYDATA_CART , totalPrice }, dispatch] = UseCart();
     return (
         <div className = "flex flex-wrap justify-center items-start">
             <div className = "w-9/12 h-screen overflow-scroll flex flex-wrap justify-center content-start items-start">
@@ -33,13 +33,13 @@ const Cart = () => {
 
             {
                 DUMMYDATA_CART.length !== 0 &&
-                <div className = "w-3/12 h-screen flex flex-wrap justify-center items-center content-center p-2 px-7 rounded-tl-3xl bg-blue-50/25 border-l border-t border-neutral-100">
+                <div className = "w-3/12 shadow-sm shadow-gray-200 h-screen flex flex-wrap justify-center items-center content-center p-2 px-7 rounded-tl-3xl bg-blue-50/25 border-l border-t border-neutral-100">
                     <div className = "p-2 pb-3 w-full text-center">
                         <h3 className = "text-2xl capitalize">order summary</h3>
                     </div>
 
                     <div className = "w-full mt-2 mb-7">
-                        <div className = "mx-auto w-12 h-[2px] bg-black rounded-full"></div>
+                        <div className = "mx-auto w-12 h-[2px] bg-gray-200 rounded-full"></div>
                     </div>
 
                     <div className = "mb-7">
