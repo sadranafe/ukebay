@@ -15,7 +15,7 @@ const reducer = (state , action) => {
             const productIsInCart = state.DUMMYDATA_CART.find(item => item.id === action.payLoad.id)
 
             if(!productIsInCart){
-                state.DUMMYDATA_CART.push({ ...action.payLoad , quantit : 1 })
+                state.DUMMYDATA_CART.push({ ...action.payLoad , quantity : 1 })
             }
 
             return {
