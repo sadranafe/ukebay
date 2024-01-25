@@ -10,9 +10,9 @@ const CartItem = ({ data , dispatch }) => {
         <>
             <div className="w-full flex flex-wrap justify-center items-center mx-5 my-2 bg-gradient-to-br from-neutral-50/70 to-blue-100/20 bg-neutral-200 p-2 rounded-xl">
 
-                <div className = "relative w-1/2 flex flex-wrap justify-evenly items-center">
+                <div className = "w-1/2 flex flex-wrap justify-evenly items-center">
                     <Link to = {`/products/${id}`} className = "w-full flex flex-wrap justify-evenly items-center">
-                        <img src = {img} alt = {title} className="w-[14%] h-20 rounded-xl" />
+                        <img src = {img} alt = {title} className="w-[14%] h-20 rounded-xl translate-y-3.5" />
 
                         <div className = "w-7/12">
                             <p className = {`text-lg ${title.length > 25 && 'text-[14.5px]'}`}>{title.length > 25 ? shortenText(title) : title}</p>
@@ -20,7 +20,7 @@ const CartItem = ({ data , dispatch }) => {
                         </div>
                     </Link>
 
-                    <div className = "absolute -bottom-1.5 left-[151px]">
+                    <div className = "w-4/12">
                         <Link to = {`/products?category=${category}`} className = " text-xs text-gray-500"># {category}</Link>
                     </div>
                 </div>
