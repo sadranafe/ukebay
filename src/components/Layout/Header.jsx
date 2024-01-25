@@ -1,6 +1,9 @@
 import { Link, NavLink } from 'react-router-dom';
+import UseCart from '../../hooks/useCart';
 
 const Header = () => {
+    const [{ DUMMYDATA_CART , totalQuantity } , dispatch] = UseCart()
+
     return (
         <>
             <header className = 'w-full flex flex-wrap justify-between items-center p-5 px-16 select-none'>
@@ -28,7 +31,7 @@ const Header = () => {
                 <div className = 'w-2/12 flex flex-wrap justify-end items-center'>
                     <Link to = '/cart' className = 'relative p-1 px-2 mr-6'>
                         <i className = 'bx bx-shopping-bag text-2xl'></i>
-                        <p className = 'absolute w-6 h-6 flex flex-wrap justify-center items-center -top-1 -right-4 text-xs border border-black rounded-full'>0</p>
+                        <p className = 'absolute w-6 h-6 flex flex-wrap justify-center items-center -top-1 -right-4 text-xs border border-black rounded-full'>{totalQuantity}</p>
                     </Link>
 
                     <Link to = '/login' className = 'border border-blue-600 p-1 px-3 rounded-lg capitalize hover:bg-blue-600 hover:text-white transition-all'>login</Link>
