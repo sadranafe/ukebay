@@ -22,6 +22,17 @@ const reducer = (state , action) => {
                 ...state,
             }
         }
+
+        case 'REMOVE_ITEM': {
+            const selectedItem = state.DUMMYDATA_CART.filter(item => {
+                return item.id !== action.payLoad.id
+            })
+
+            return {
+                ...state,
+                DUMMYDATA_CART: [...selectedItem],
+            }
+        }
     }
 }
 
