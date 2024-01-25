@@ -44,6 +44,7 @@ Welcome to _UkeBay_, our fantastic Shopping Cart project! 🛒 This project is a
 We welcome contributions to make __UkeBay__ even more awesome! Whether it's bug fixes, feature additions, or improvements to the documentation, your help is highly appreciated.
 
 ## Features
+- Nice filtering , sorting and searching!
 - Responsive design for optimal viewing across devices
 - Seamless navigation with React Router Dom
 - Integration of Material UI components for enhanced user interface
