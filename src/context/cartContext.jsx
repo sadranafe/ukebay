@@ -33,6 +33,32 @@ const reducer = (state , action) => {
                 DUMMYDATA_CART: [...selectedItem],
             }
         }
+
+        case 'INCREASE_QUANTITY': {
+            const selectedItemIndex = state.DUMMYDATA_CART.findIndex(item => {
+                return item.id === action.payLoad.id
+            })
+
+            state.DUMMYDATA_CART[selectedItemIndex].quantity++
+
+            return {
+                ...state,
+            }
+        }
+
+        case 'DECREASE_QUANTITY': {
+            const selectedItemIndex = state.DUMMYDATA_CART.findIndex(item => {
+                return item.id === action.payLoad.id
+            })
+
+            if(state.DUMMYDATA_CART[selectedItemIndex].quantity > 1){
+                state.DUMMYDATA_CART[selectedItemIndex].quantity--
+            }
+
+            return {
+                ...state,
+            }
+        }
     }
 }
 
