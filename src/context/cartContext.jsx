@@ -33,7 +33,7 @@ const reducer = (state , action) => {
             return {
                 ...state,
                 DUMMYDATA_CART: [...selectedItem],
-                ...sumHandler(state.DUMMYDATA_CART)
+                ...sumHandler(selectedItem)
             }
         }
 
