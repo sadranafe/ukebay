@@ -1,8 +1,14 @@
 import { Rating } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { quantityCalc } from '../helper/helper';
+import UseCart from '../hooks/useCart';
+import { AddToCartBTN, DecreasetBTN, DeleteBTN, IncreaseBTN } from './Layout/Btn';
 
 const HighlightedProduct = ({ data }) => {
+    const [state , dispatch] = UseCart();
     const {id , image : img , title , category , rating , price , description : desc} = data;
+
+    const quantity = quantityCalc(state.DUMMYDATA_CART , id);
 
     return (
         <>
@@ -46,7 +52,23 @@ const HighlightedProduct = ({ data }) => {
                             <Link to = {`/products?category=${category}`} className = 'p-2 text-gray-500 hover:text-gray-800 transition-all'># {category}</Link>
                         </div>
 
-                        <button className = 'border border-blue-300 hover:bg-blue-300 transition-all rounded-xl capitalize p-2 px-10 '>add to cart</button>
+                        {
+                            quantity ?
+                            <div className = 'flex flex-wrap justify-center items-center'>
+                                {
+                                    quantity >= 2 ?
+                                    <DecreasetBTN data = {data} dispatch = {dispatch} isDisabled = {false} />
+                                    :
+                                    <DeleteBTN data = {data} dispatch = {dispatch}/>
+                                }
+
+                                <input type = "text" inputMode = 'numeric' className = 'w-4/12 text-center bg-gray-100 p-2 rounded-xl' value = {quantity} disabled/>
+
+                                <IncreaseBTN data = {data} dispatch = {dispatch}/>
+                            </div> 
+                            :
+                            <AddToCartBTN data = {data} dispatch = {dispatch} />
+                        }
                     </div>
 
                 </div>
