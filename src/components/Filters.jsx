@@ -29,7 +29,7 @@ const Filters = ({ query , onQuery }) => {
                     <li onClick = {categoryHandler} className = "capitalize hover:text-blue-500 transition-all cursor-pointer py-2 my-1">all</li>
                     {
                         categories.map((item , index) => 
-                            <li key = {index} onClick = {categoryHandler} className = {`${query.category === item ? 'hover:text-neutral-950 after:w-2 after:h-2 after:bg-cyan-500 border border-cyan-500 pl-2 rounded-xl after:absolute after:-left-4 after:top-3 after:rounded-full' : 'border-transparent'} border-transparent relative border hover:text-blue-500 capitalize transition-all cursor-pointer py-2 my-1`}>{item}</li>
+                            <li key = {index} onClick = {categoryHandler} className = {`${query.category === item ? 'hover:text-neutral-950 after:w-2 after:h-2 after:bg-cyan-500 border border-cyan-500 pl-2 rounded-xl after:absolute after:-left-4 after:top-3 after:rounded-full' : 'border-transparent'} relative border hover:text-blue-500 capitalize transition-all cursor-pointer py-2 my-1`}>{item}</li>
                         )
                     }
                 </ul>
