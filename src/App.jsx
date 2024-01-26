@@ -6,7 +6,7 @@ import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import ProductsDetails from "./pages/ProductsDetails";
-import Cart from "./pages/Cart";
+import Cart from "./pages/cart";
 import ContactUs from "./pages/ContactUs";
 import Login from "./pages/Login";
 import Customers from "./pages/Customers";
