@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import UseCart from "../hooks/useCart";
 import CartItem from "../components/cartItem";
 
-const Cart = () => {
+const Basket = () => {
     const [{ DUMMYDATA_CART , totalPrice }, dispatch] = UseCart();
     return (
         <div className = "flex flex-wrap justify-center items-start">
@@ -68,4 +68,4 @@ const Cart = () => {
     )
 }
 
-export default Cart;
+export default Basket;

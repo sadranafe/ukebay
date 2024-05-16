@@ -6,7 +6,7 @@ import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import ProductsDetails from "./pages/ProductsDetails";
-import Cart from "./pages/cart";
+import Basket from "./pages/basket";
 import ContactUs from "./pages/ContactUs";
 import Login from "./pages/Login";
 import Customers from "./pages/Customers";
@@ -21,7 +21,7 @@ const App = () => {
               <Route index element = {<Home/>}/>
               <Route path = "/products" element = {<Products/>}/>
               <Route path = "/products/*" element = {<ProductsDetails/>}/>
-              <Route path = "/cart" element = {<Cart/>}/>
+              <Route path = "/cart" element = {<Basket/>}/>
               <Route path = "/contact-us" element = {<ContactUs />}/>
               <Route path = "/login" element = {<Login/>}/>
               <Route path = "/customers" element = {<Customers/>}/>
