@@ -20,7 +20,7 @@ Welcome to _UkeBay_, our fantastic Shopping Cart project! 🛒 This project is a
 
 ## Features
 - Nice filtering , sorting and searching!
-- Responsive design for optimal viewing across devices
+- Responsive design for optimal viewing across devices (soon)
 - Seamless navigation with React Router Dom
 - Integration of Material UI components for enhanced user interface
 - Asynchronous data fetching using Axios
