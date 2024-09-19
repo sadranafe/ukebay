@@ -1,5 +1,5 @@
 # __UkeBay__ - Awesome Shopping Cart Project
-Welcome to _UkeBay_, our fantastic Shopping Cart project! 🛒 This project is a result of our passion for creating seamless and enjoyable shopping experiences using cutting-edge web technologies.
+Welcome to _UkeBay_, my fantastic Shopping Cart project! 🛒 This project is a result of my passion for creating seamless and enjoyable shopping experiences using cutting-edge web technologies.
 
 ## Key Technologies Used :
 - React: The backbone of our project, providing a dynamic and responsive user interface.
@@ -20,7 +20,7 @@ Welcome to _UkeBay_, our fantastic Shopping Cart project! 🛒 This project is a
 
 ## Features
 - Nice filtering , sorting and searching!
-- Responsive design for optimal viewing across devices (soon)
+- Responsive design for optimal viewing across devices (soon...)
 - Seamless navigation with React Router Dom
 - Integration of Material UI components for enhanced user interface
 - Asynchronous data fetching using Axios
@@ -30,7 +30,7 @@ Welcome to _UkeBay_, our fantastic Shopping Cart project! 🛒 This project is a
 ## Getting Started :
 
 #### Prerequisites
-- Make sure you have Node.js installed.
+- Make sure you have Node.js installed (the latest version).
 - Clone this repository to your local machine.
 
 #### Installation
@@ -50,7 +50,7 @@ Welcome to _UkeBay_, our fantastic Shopping Cart project! 🛒 This project is a
 - [Boxicons]('https://boxicons.com')
 
 ## Contributing
-We welcome contributions to make __UkeBay__ even more awesome! Whether it's bug fixes, feature additions, or improvements to the documentation, your help is highly appreciated.
+I welcome contributions to make __UkeBay__ even more awesome! Whether it's bug fixes, feature additions, or improvements to the documentation, your help is highly appreciated.
 
 ## Acknowledgements
 - Special thanks to the creators and contributors of the dependencies used in this project.
